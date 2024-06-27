@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'Feauters/presentation/views/splash_view.dart';
+
 void main() {
   runApp(const BooklyApp());
 }
