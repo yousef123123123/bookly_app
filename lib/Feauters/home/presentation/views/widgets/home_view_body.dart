@@ -1,36 +1,37 @@
 import 'package:bookly/Feauters/home/presentation/views/widgets/custom_app_bar.dart';
-import 'package:bookly/Feauters/home/presentation/views/widgets/custom_list_view_item.dart';
+import 'package:bookly/Feauters/home/presentation/views/widgets/feautredList_View.dart';
+import 'package:bookly/constants.dart';
+import 'package:bookly/core/utils/assets.dart';
+import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+
+import 'BestSeller_ListView.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        CustomAppBar(),
-        FeauterdBooksListView(),
-      ],
-    );
-  }
-}
-
-class FeauterdBooksListView extends StatelessWidget {
-  const FeauterdBooksListView({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * .3,
-      child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: featuredListviewItem(),
-            );
-          }),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          CustomAppBar(),
+          FeauterdBooksListView(),
+          const SizedBox(
+            height: 50,
+          ),
+          Text(
+            'Best Seller',
+            style: Styles.textStyle18,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          BestSellerListViewItem()
+        ],
+      ),
     );
   }
 }
