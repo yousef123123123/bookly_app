@@ -1,7 +1,10 @@
+import 'package:bookly/Feauters/home/presentation/views/widgets/Box_Action.dart';
 import 'package:bookly/Feauters/home/presentation/views/widgets/Custom_book_details_app_bar.dart';
 import 'package:bookly/Feauters/home/presentation/views/widgets/Custom_Book_Item.dart';
+import 'package:bookly/Feauters/home/presentation/views/widgets/bookRating.dart';
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/core/widgets/custom_Button.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -16,19 +19,33 @@ class BookDetailsViewBody extends StatelessWidget {
         children: [
           customAppBarBookDetails(),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * .17),
+            padding: EdgeInsets.symmetric(horizontal: width * .2),
             child: CustomBookImage(),
           ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width * .5,
-            child: Text(
-              'Harry Potter               and the  Goblet of Fire',
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: Styles.textStyle20.copyWith(
-                  fontFamily: kGtSectraFine, fontWeight: FontWeight.bold),
-            ),
+          const SizedBox(
+            height: 43,
           ),
+          Text('The Jungle Book',
+              style: Styles.textStyle30.copyWith(fontWeight: FontWeight.bold)),
+          const SizedBox(
+            height: 6,
+          ),
+          Opacity(
+            opacity: .8,
+            child: Text('Rudyard Kipling',
+                style: Styles.textStyle18.copyWith(
+                    fontStyle: FontStyle.italic, fontWeight: FontWeight.w500)),
+          ),
+          const SizedBox(
+            height: 18,
+          ),
+          BookRating(
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
+          const SizedBox(
+            height: 37,
+          ),
+          const BooksAction(),
         ],
       ),
     );
