@@ -1,5 +1,5 @@
-import 'package:bookly/Feauters/home/presentation/views/book-details_view.dart';
-import 'package:bookly/Feauters/home/presentation/views/home_view.dart';
+import 'package:bookly/Feauters/home/book-details_view.dart';
+import 'package:bookly/Feauters/home/home_view.dart';
 import 'package:bookly/Feauters/search/presentation/views/search_view.dart';
 import 'package:go_router/go_router.dart';
 
