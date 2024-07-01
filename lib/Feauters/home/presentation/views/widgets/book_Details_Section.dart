@@ -16,7 +16,10 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .2),
-          child: CustomBookImage(),
+          child: CustomBookImage(
+            imageUrl:
+                'https://5.imimg.com/data5/SELLER/Default/2023/3/296178163/GX/GL/SD/186724856/vivo-mobile-phone-1000x1000.jpg',
+          ),
         ),
         const SizedBox(
           height: 43,
