@@ -9,7 +9,7 @@ abstract class NewestBooksState extends Equatable {
 
 class NewestBooksInitial extends NewestBooksState {}
 
-class FeauturedBooksLoading extends NewestBooksState {}
+class NewestBooksLoading extends NewestBooksState {}
 
 class NewestBooksSuccess extends NewestBooksState {
   final List<BookModel> books;
