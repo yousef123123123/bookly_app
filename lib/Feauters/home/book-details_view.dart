@@ -1,6 +1,5 @@
 import 'package:bookly/Feauters/home/data/models/book_model/book_model.dart';
 import 'package:bookly/Feauters/home/presentation/manager/similarbooks%20cubit/similar_books_cubit_cubit.dart';
-import 'package:bookly/core/widgets/custom_Button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,8 +22,11 @@ class _BookDetailsViewState extends State<BookDetailsView> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(child: BookDetailsViewBody()),
+    return Scaffold(
+      body: SafeArea(
+          child: BookDetailsViewBody(
+        bookModel: widget.bookModel,
+      )),
     );
   }
 }

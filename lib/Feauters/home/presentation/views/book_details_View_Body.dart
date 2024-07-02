@@ -1,17 +1,13 @@
-import 'package:bookly/Feauters/home/presentation/views/widgets/Box_Action.dart';
 import 'package:bookly/Feauters/home/presentation/views/widgets/Custom_book_details_app_bar.dart';
-import 'package:bookly/Feauters/home/presentation/views/widgets/Custom_Book_Item.dart';
-import 'package:bookly/Feauters/home/presentation/views/widgets/Similar_Box_List_view.dart';
 import 'package:bookly/Feauters/home/presentation/views/widgets/Similar_Box_Section.dart';
-import 'package:bookly/Feauters/home/presentation/views/widgets/bookRating.dart';
 import 'package:bookly/Feauters/home/presentation/views/widgets/book_Details_Section.dart';
-import 'package:bookly/constants.dart';
-import 'package:bookly/core/utils/styles.dart';
-import 'package:bookly/core/widgets/custom_Button.dart';
 import 'package:flutter/material.dart';
 
+import '../../data/models/book_model/book_model.dart';
+
 class BookDetailsViewBody extends StatelessWidget {
-  const BookDetailsViewBody({super.key});
+  const BookDetailsViewBody({super.key, required this.bookModel});
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +18,11 @@ class BookDetailsViewBody extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Column(
-                children: const [
+                children: [
                   customAppBarBookDetails(),
-                  BookDetailsSection(),
+                  BookDetailsSection(
+                    book: bookModel,
+                  ),
                   Expanded(
                     child: const SizedBox(
                       height: 50,

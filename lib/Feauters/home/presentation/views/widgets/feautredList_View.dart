@@ -4,6 +4,9 @@ import 'package:bookly/core/widgets/Custom_error_wideget.dart';
 import 'package:bookly/core/widgets/custom_Loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../../core/utils/App_router.dart';
 
 class FeauterdBooksListView extends StatelessWidget {
   const FeauterdBooksListView({super.key});
@@ -21,10 +24,18 @@ class FeauterdBooksListView extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8),
-                    child: CustomBookImage(
-                      imageUrl: state
-                              .books[index].volumeInfo.imageLinks?.thumbnail ??
-                          'https://easydrawingguides.com/wp-content/uploads/2020/10/how-to-draw-an-open-book-featured-image-1200.png',
+                    child: GestureDetector(
+                      onTap: () {
+                        GoRouter.of(context).push(
+                          AppRouter.kBookDetailsView,
+                          extra: state.books[index],
+                        );
+                      },
+                      child: CustomBookImage(
+                        imageUrl: state.books[index].volumeInfo.imageLinks
+                                ?.thumbnail ??
+                            'https://easydrawingguides.com/wp-content/uploads/2020/10/how-to-draw-an-open-book-featured-image-1200.png',
+                      ),
                     ),
                   );
                 }),
