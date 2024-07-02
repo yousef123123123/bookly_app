@@ -3,7 +3,7 @@ import 'package:bookly/Feauters/home/presentation/views/widgets/Similar_Box_Sect
 import 'package:bookly/Feauters/home/presentation/views/widgets/book_Details_Section.dart';
 import 'package:flutter/material.dart';
 
-import '../../data/models/book_model/book_model.dart';
+import '../../../../core/models/book_model.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key, required this.bookModel});

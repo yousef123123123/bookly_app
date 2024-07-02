@@ -1,5 +1,5 @@
 import 'package:bookly/Feauters/home/book-details_view.dart';
-import 'package:bookly/Feauters/home/data/models/book_model/book_model.dart';
+import 'package:bookly/core/models/book_model.dart';
 import 'package:bookly/Feauters/home/data/models/repos/home_repo_impl.dart';
 import 'package:bookly/Feauters/home/home_view.dart';
 import 'package:bookly/Feauters/home/presentation/manager/similarbooks%20cubit/similar_books_cubit_cubit.dart';

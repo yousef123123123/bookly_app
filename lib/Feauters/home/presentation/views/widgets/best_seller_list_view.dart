@@ -1,4 +1,4 @@
-import 'package:bookly/Feauters/home/data/models/book_model/book_model.dart';
+import 'package:bookly/core/models/book_model.dart';
 import 'package:bookly/Feauters/home/presentation/manager/newest%20books_cubit/newest_books_cubit.dart';
 import 'package:bookly/Feauters/home/presentation/views/widgets/BestSeller_ListView_item.dart';
 import 'package:bookly/core/widgets/Custom_error_wideget.dart';
