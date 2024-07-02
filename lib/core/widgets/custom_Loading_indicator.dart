@@ -1,3 +1,4 @@
+import 'package:bookly/core/widgets/shimmar.dart';
 import 'package:flutter/material.dart';
 
 class CustomLoadingIndicator extends StatelessWidget {
@@ -5,6 +6,6 @@ class CustomLoadingIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: CircularProgressIndicator());
+    return Center(child: shimmer());
   }
 }

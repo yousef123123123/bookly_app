@@ -23,7 +23,8 @@ class BookListViewItem extends StatelessWidget {
         child: Row(
           children: [
             CustomBookImage(
-                imageUrl: bookModel.volumeInfo.imageLinks.thumbnail),
+                imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ??
+                    'https://easydrawingguides.com/wp-content/uploads/2020/10/how-to-draw-an-open-book-featured-image-1200.png'),
             SizedBox(
               width: 30,
             ),
@@ -49,14 +50,14 @@ class BookListViewItem extends StatelessWidget {
                     bookModel.volumeInfo.authors![0],
                     style: Styles.textStyle14,
                   ),
-                  const SizedBox(
-                    height: 3,
-                  ),
+                  // const SizedBox(
+                  //   height: 3,
+                  // ),
                   Row(
                     children: [
                       Text(
                         'Free',
-                        style: Styles.textStyle20
+                        style: Styles.textStyle18
                             .copyWith(fontWeight: FontWeight.bold),
                       ),
                       const Spacer(),

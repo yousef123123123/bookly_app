@@ -22,8 +22,9 @@ class FeauterdBooksListView extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8),
                     child: CustomBookImage(
-                      imageUrl:
-                          state.books[index].volumeInfo.imageLinks.thumbnail,
+                      imageUrl: state
+                              .books[index].volumeInfo.imageLinks?.thumbnail ??
+                          'https://easydrawingguides.com/wp-content/uploads/2020/10/how-to-draw-an-open-book-featured-image-1200.png',
                     ),
                   );
                 }),
